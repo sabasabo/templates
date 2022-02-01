@@ -4,6 +4,7 @@ deploy:
   steps:
     terraformPlan:
       before:
+        - cat ~/.ssh/config
         - node --version
         - npm --version
         - yarn --version
