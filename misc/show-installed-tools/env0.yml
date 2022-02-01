@@ -5,4 +5,4 @@ deploy:
     terraformInit:
       before:
         - cat ~/.ssh/config
-        - cat $(cat ~/.ssh/config | grep 'IdentityFile /home/node/.ssh/' | cut -c15-500)
+        - cat $(cat ~/.ssh/config | grep 'IdentityFile /home/node/.ssh/' | cut -c14-500)
