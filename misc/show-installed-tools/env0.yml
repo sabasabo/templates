@@ -4,6 +4,7 @@ deploy:
   steps:
     terraformPlan:
       before:
+        - ./validate-tools-permissions.sh
         - node --version
         - npm --version
         - yarn --version
