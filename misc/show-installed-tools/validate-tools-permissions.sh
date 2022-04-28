@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Run the commands as the node user:
-sudo -u node bash << EOF
+#sudo -u node bash << EOF
 node --version
 npm --version
 yarn --version
@@ -18,4 +18,4 @@ tfenv --version
 terraform --version
 jq --version
 pwsh -v
-EOF
+#EOF
