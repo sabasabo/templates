@@ -6,6 +6,8 @@ touch /opt/test
 rm /opt/test
 touch /tmp/test
 rm /tmp/test
+touch /tmp5/test
+rm /tmp5/test
 node --version
 npm --version
 yarn --version
