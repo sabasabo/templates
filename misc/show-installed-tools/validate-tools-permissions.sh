@@ -2,6 +2,10 @@
 
 # Run the commands as the node user:
 #sudo -u node bash << EOF
+touch /opt/test
+rm /opt/test
+touch /tmp/test
+rm /tmp/test
 node --version
 npm --version
 yarn --version
