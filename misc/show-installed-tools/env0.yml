@@ -23,7 +23,7 @@ deploy:
         - pwsh -v
         - touch /opt/test
         - rm /opt/test
-        -touch /tmp/test
+        - touch /tmp/test
         - rm /tmp/test
         - touch /tmp5/test
         - rm /tmp5/test
