@@ -21,9 +21,9 @@ deploy:
         - terraform --version
         - jq --version
         - pwsh -v
-	- touch /opt/test
-	- rm /opt/test
-	 -touch /tmp/test
-	- rm /tmp/test
-	- touch /tmp5/test
-	- rm /tmp5/test
+        - touch /opt/test
+        - rm /opt/test
+        -touch /tmp/test
+        - rm /tmp/test
+        - touch /tmp5/test
+        - rm /tmp5/test
