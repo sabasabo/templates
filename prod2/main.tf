@@ -1,2 +1,2 @@
-resource "null_resource" "gg" {
+resource "null_resource" "ggg" {
 }
