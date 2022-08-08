@@ -1,0 +1,9 @@
+environments:
+  rootService1:
+    name: rootService1
+    templateName: 'workflow1'
+  middleService1:
+    name: middleService1
+    templateName: 'workflow2'
+    needs:
+      - rootService1
