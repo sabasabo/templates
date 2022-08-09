@@ -1,3 +1,3 @@
-# root folder terraform      d
+# root folder terraform      de
 resource "null_resource" "null"  
 }
