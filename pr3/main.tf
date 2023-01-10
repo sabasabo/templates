@@ -1,4 +1,4 @@
 
-resource "null_resource" "prbranch1" {
+resource "null_resource" "prbranch2" {
   count=2
 }
