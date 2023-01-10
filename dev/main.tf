@@ -1,6 +1,6 @@
 
 
-resource "null_resource" "yoshhdiig" {
-  count = 2
+resource "null_resource" "devBranchMaster" {
+  count = 3
 }
 
