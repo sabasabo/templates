@@ -1,4 +1,4 @@
 
-resource "null_resource" "yostthhiig" {
+resource "null_resource" "prbranch" {
   count=7
 }
