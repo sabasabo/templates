@@ -1,4 +1,4 @@
 
-resource "null_resource" "prbra1nch3211" {
-  count=1
+resource "null_resource" "prbra1nch32111" {
+  count=2
 }
