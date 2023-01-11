@@ -1,6 +1,6 @@
 
 
 resource "null_resource" "devBranchMaster" {
-  count = 4
+  count = 5
 }
 
