@@ -1,3 +1,3 @@
-resource "null_resource" "abcd" {
+resource "null_resource" "abcabc" {
   count=2
 }
