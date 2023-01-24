@@ -1,18 +1,18 @@
 version: 2
 deploy:
   steps:
-  terraformPlan:
-  before:
-    - name: Open Policy Agent
-      use: https://github.com/env0/env0-opa-plugin
-    - name: Checkov
-      use: https://github.com/env0/env0-checkov-plugin
-    - name: tflint
-      use: https://github.com/env0/env0-tflint-plugin
-    - name: tfsec
-      use: https://github.com/env0/env0-tfsec-plugin
-    - name: Trivy
-      use: https://github.com/env0/env0-trivy-plugin
-    - name: Lightlytics
-      use: https://github.com/lightlytics/env0-lightlytics-plugin
+    terraformPlan:
+      before:
+      - name: Open Policy Agent
+        use: https://github.com/env0/env0-opa-plugin
+      - name: Checkov
+        use: https://github.com/env0/env0-checkov-plugin
+      - name: tflint
+        use: https://github.com/env0/env0-tflint-plugin
+      - name: tfsec
+        use: https://github.com/env0/env0-tfsec-plugin
+      - name: Trivy
+        use: https://github.com/env0/env0-trivy-plugin
+      - name: Lightlytics
+        use: https://github.com/lightlytics/env0-lightlytics-plugin
 
