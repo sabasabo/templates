@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    template = "~> 2.0"
+    null = "~> 2.0"
   }
 }
 
