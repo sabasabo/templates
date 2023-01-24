@@ -17,10 +17,6 @@ weights := {
 # Consider exactly these resource types in calculations
 resource_types := {"null_resource"}
 
-#########
-# Policy
-#########
-
 
 
 ####################
