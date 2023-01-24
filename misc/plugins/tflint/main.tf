@@ -1,5 +1,13 @@
 terraform {
-  required_version = ">= 1.2.2"
+  required_version = ">= 1.0.0"
+
+  required_providers {
+    aws        = "~> 3.68.0"
+    kubectl = {
+      source  = "gavinbunney/kubectl"
+      version = ">= 1.7.0"
+    }
+  }
 }
 
 resource "null_resource" "null_resource" {
