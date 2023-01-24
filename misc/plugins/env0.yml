@@ -16,10 +16,21 @@ deploy:
           flags: --framework terraform
       - name: tflint
         use: https://github.com/env0/env0-tflint-plugin
+        inputs:
+          version: v0.43.0
+          directory: .
       - name: tfsec
         use: https://github.com/env0/env0-tfsec-plugin
+        inputs:
+          version: v1.28.0
+          directory: .
       - name: Trivy
         use: https://github.com/env0/env0-trivy-plugin
+        inputs:
+          version: v0.36.1
+          directory: .
+          global-flags: --format table
+          flags: --exit-code 1
       - name: Lightlytics
         use: https://github.com/lightlytics/env0-lightlytics-plugin
 
