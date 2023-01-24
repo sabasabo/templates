@@ -8,5 +8,5 @@ deploy:
         inputs:
           path: .
           flags: --fail --format=raw
-          query: data.example.violation[x]
+          query: data.values.violation[x]
 

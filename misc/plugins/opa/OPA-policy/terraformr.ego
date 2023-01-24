@@ -11,12 +11,11 @@ blast_radius := 30
 
 # weights assigned for each operation on each resource-type
 weights := {
-    "aws_autoscaling_group": {"delete": 100, "create": 10, "modify": 1},
-    "aws_instance": {"delete": 10, "create": 1, "modify": 1}
+    "null_resource": {"delete": 100, "create": 10, "modify": 1},
 }
 
 # Consider exactly these resource types in calculations
-resource_types := {"aws_autoscaling_group", "aws_instance", "aws_iam", "aws_launch_configuration"}
+resource_types := {"null_resource"}
 
 #########
 # Policy
@@ -40,12 +39,6 @@ score := s {
             x := del + new + mod
     ]
     s := sum(all)
-}
-
-# Whether there is any change to IAM
-touches_iam {
-    all := resources["aws_iam"]
-    count(all) > 0
 }
 
 ####################
@@ -72,20 +65,3 @@ num_creates[resource_type] := num {
 }
 
 
-# number of deletions of resources of a given type
-num_deletes[resource_type] := num {
-    some resource_type
-    resource_types[resource_type]
-    all := resources[resource_type]
-    deletions := [res |  res:= all[_]; res.change.actions[_] == "delete"]
-    num := count(deletions)
-}
-
-# number of modifications to resources of a given type
-num_modifies[resource_type] := num {
-    some resource_type
-    resource_types[resource_type]
-    all := resources[resource_type]
-    modifies := [res |  res:= all[_]; res.change.actions[_] == "update"]
-    num := count(modifies)
-}
