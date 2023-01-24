@@ -6,7 +6,7 @@ deploy:
       - name: Open Policy Agent
         use: https://github.com/env0/env0-opa-plugin
         inputs:
-          path: OPA-policy/
+          path: .
           flags: --fail --format=raw
           query: data.example.violation[x]
 
