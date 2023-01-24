@@ -5,6 +5,10 @@ deploy:
       before:
       - name: Open Policy Agent
         use: https://github.com/env0/env0-opa-plugin
+        inputs:
+          path: bundle-file-path
+          flags: --fail --format=raw
+          query: data.example.violation[x]
       - name: Checkov
         use: https://github.com/env0/env0-checkov-plugin
       - name: tflint
