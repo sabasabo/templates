@@ -21,18 +21,7 @@ resource_types := {"null_resource"}
 # Policy
 #########
 
-# Compute the score for a Terraform plan as the weighted sum of deletions, creations, modifications
-score := s {
-    all := [ x |
-            some resource_type
-            crud := weights[resource_type];
-            del := crud["delete"] * num_deletes[resource_type];
-            new := crud["create"] * num_creates[resource_type];
-            mod := crud["modify"] * num_modifies[resource_type];
-            x := del + new + mod
-    ]
-    s := sum(all)
-}
+
 
 ####################
 # Terraform Library
