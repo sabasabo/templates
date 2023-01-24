@@ -10,4 +10,3 @@ deploy:
           directory: .
           global-flags: --format table
           flags: --exit-code 1
-
