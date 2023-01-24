@@ -36,5 +36,5 @@ deploy:
         inputs:
           directory: .
           token: aa
-          environment:
+          environment: https://ablabla
 
