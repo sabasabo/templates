@@ -21,13 +21,6 @@ resource_types := {"null_resource"}
 # Policy
 #########
 
-# Authorization holds if score for the plan is acceptable and no changes are made to IAM
-default authz := false
-authz {
-    score < blast_radius
-    not touches_iam
-}
-
 # Compute the score for a Terraform plan as the weighted sum of deletions, creations, modifications
 score := s {
     all := [ x |
