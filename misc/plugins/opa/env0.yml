@@ -6,7 +6,8 @@ deploy:
       - name: Open Policy Agent
         use: https://github.com/env0/env0-opa-plugin
         inputs:
-          path: .
+          path: opa-policy
           flags: --fail --format=raw
-          query: data.values.violation[x]
+          query: data.terraform.validation.violations[msg]
+
 
