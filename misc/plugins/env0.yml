@@ -9,11 +9,6 @@ deploy:
 #          path: OPA-policy/
 #          flags: --fail --format=raw
 #          query: data.example.violation[x]
-      - name: Checkov
-        use: https://github.com/env0/env0-checkov-plugin
-        inputs:
-          directory: .
-          flags: --framework terraform
       - name: tflint
         use: https://github.com/env0/env0-tflint-plugin
         inputs:
@@ -31,6 +26,11 @@ deploy:
           directory: .
           global-flags: --format table
           flags: --exit-code 1
+      - name: Checkov
+        use: https://github.com/env0/env0-checkov-plugin
+        inputs:
+          directory: .
+          flags: --framework terraform
       - name: Lightlytics
         use: https://github.com/lightlytics/env0-lightlytics-plugin
         inputs:
