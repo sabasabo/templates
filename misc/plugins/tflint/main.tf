@@ -2,7 +2,7 @@ terraform {
   required_version = ">= 1.0.0"
 
   required_providers {
-    null        = "~> 3.68.0"
+    null        = "~> 3.2.1"
   }
 }
 
