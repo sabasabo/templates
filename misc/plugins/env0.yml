@@ -6,7 +6,7 @@ deploy:
       - name: Open Policy Agent
         use: https://github.com/env0/env0-opa-plugin
         inputs:
-          path: bundle-file-path
+          path: OPA-policy/
           flags: --fail --format=raw
           query: data.example.violation[x]
       - name: Checkov
