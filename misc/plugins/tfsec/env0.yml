@@ -3,38 +3,9 @@ deploy:
   steps:
     terraformPlan:
       before:
-#      - name: Open Policy Agent
-#        use: https://github.com/env0/env0-opa-plugin
-#        inputs:
-#          path: OPA-policy/
-#          flags: --fail --format=raw
-#          query: data.example.violation[x]
-      - name: tflint
-        use: https://github.com/env0/env0-tflint-plugin
-        inputs:
-          version: v0.43.0
-          directory: .
       - name: tfsec
         use: https://github.com/env0/env0-tfsec-plugin
         inputs:
           version: v1.28.0
           directory: .
-      - name: Trivy
-        use: https://github.com/env0/env0-trivy-plugin
-        inputs:
-          version: v0.36.1
-          directory: .
-          global-flags: --format table
-          flags: --exit-code 1
-      - name: Checkov
-        use: https://github.com/env0/env0-checkov-plugin
-        inputs:
-          directory: .
-          flags: --framework terraform
-      - name: Lightlytics
-        use: https://github.com/lightlytics/env0-lightlytics-plugin
-        inputs:
-          directory: .
-          token: aa
-          environment: https://ablabla
 
